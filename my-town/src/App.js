@@ -5,7 +5,7 @@ import { CssBaseline} from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-    backgroundImage: `url(${process.env.PUBLIC_URL + '/images/larisa.jpg'})`,
+    backgroundImage: `url(${process.env.PUBLIC_URL + '/images/larisa2.jpg'})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
