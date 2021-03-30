@@ -9,8 +9,9 @@ const places = [
     {
         title:"Ancient Theatre",
         description:
-        "A fortress was also built here by the Byzantines during the early years of their empire. Today, only the 15th century Turkish market survives, constructed with the remains of older structures. On the southern slope of the hill we can visit the ruins of the ancient theatre. In close proximity to this theatre, was recently discovered a smaller one, which is also of great archaeological importance.",
-        imageUrl:process.env.PUBLIC_URL + '/images/larisa.jpg'
-    }
+        "Point of departure will be the acropolis on the hill of Agios Achillios (Saint Achilles, the patron saint of the city), a location which has been continuously inhabited since the Neolithic period. A fortress was also built here by the Byzantines during the early years of their empire. Today, only the 15th century Turkish market survives, constructed with the remains of older structures. On the southern slope of the hill we can visit the ruins of the ancient theatre. In close proximity to this theatre.",
+        imageUrl:process.env.PUBLIC_URL + '/images/larisa.jpg',
+        time: 1500,
+    },
 ];
 export default places;
