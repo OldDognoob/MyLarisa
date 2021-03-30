@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 //@material ui-core (style)
 import { makeStyles } from "@material-ui/styles";
-import { AppBar, IconButton, Toolbar } from "@material-ui/core";
+import { AppBar, IconButton, Toolbar, Collapse } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import { Link as Scroll } from 'react-scroll';
 const useStyles = makeStyles((theme) => ({
   root:{
     display:"flex",
@@ -45,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Header() {
   const classes = useStyles();
+  const[checked, setChecked] = useState(false);
+  useEffect(()=>{
+      setChecked(true);
+  },[])
   return (
     <div className={classes.root}>
       <AppBar className={classes.appbar} elevation={0}>
@@ -57,15 +61,19 @@ function Header() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <Collapse in={checked} {...(checked? {timeout: 1000} : {})} collapsedHeight={50}>
       <div className={classes.container}>
         <h1 className={classes.title}>
           Welcome to <br /> 
           My<span className={classes.colorTitleText}>Town.</span>
         </h1>
+        <Scroll to="place-to-visit" smooth={true}>
         <IconButton>
             <ExpandMoreIcon className={classes.goDownIcon}/>
         </IconButton>
+        </Scroll>
       </div>
+      </Collapse>
     </div>
   );
 }
