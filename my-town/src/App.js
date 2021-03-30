@@ -1,6 +1,9 @@
 import React from "react";
+//@material ui-core (style)
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline} from '@material-ui/core';
+// Components folder
+import Header from './components/Header';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +18,7 @@ export default function App() {
     return(
       <div className={classes.root}>
         <CssBaseline/>
-        {/* <Header/> */}
+        <Header/>
         {/* <PlaceToVisit/> */}
       </div>
     );
