@@ -33,11 +33,11 @@ export default function ImageCard({ place, checked }) {
   const classes = useStyles();
 
   return (
-    <Collapse in={checked} {...classes(checked ? { timeout: 1000 } : {})}>
+    <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
       <Card className={classes.root}>
         <CardMedia
           className={classes.media}
-          image={process.env.PUBLIC_URL + "/images/larisa1.jpg"}
+          image={place.imageUrl}
           title="Larisa"
         />
         <CardContent>
